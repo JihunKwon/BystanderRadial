@@ -32,8 +32,8 @@ void BGMSCRunAction::BeginOfRunAction(const G4Run* aRun)
     Writer->BeginOfRunAction(aRun);
 
     G4CsvAnalysisManager* analysisManager = G4CsvAnalysisManager::Instance();
-    G4cout << " Histogram id is " <<
-              analysisManager->CreateH1("Stokes", "Energy Eistribution of gamma", 1500., 0., 1500.) << G4endl; //...Bin number, MinE, MaxE
+    analysisManager->CreateH1("Enter", "Energy Eistribution of entering e-", 500., 0., 100.); //...Bin number, MinE, MaxE
+    analysisManager->CreateH1("Escape", "Energy Eistribution of escaping e-", 500., 0., 100.); //...Bin number, MinE, MaxE
 }
 
 void BGMSCRunAction::EndOfRunAction(const G4Run* aRun)
@@ -42,4 +42,6 @@ void BGMSCRunAction::EndOfRunAction(const G4Run* aRun)
     G4CsvAnalysisManager* analysisManager = G4CsvAnalysisManager::Instance();
     analysisManager->Write();
     analysisManager->CloseFile();
+
+    //delete G4CsvAnalysisManager::Instance(); // required?
 }

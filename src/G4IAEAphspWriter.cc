@@ -58,7 +58,7 @@
 
 #include "G4IAEAphspWriter.hh"
 
-#define radius 5
+//#define radius 15
 
 G4IAEAphspWriter * G4IAEAphspWriter::theInstance = 0;
 

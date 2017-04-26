@@ -23,7 +23,7 @@
 #include "G4UserLimits.hh"
 
 #define radius 5 // Half of diameter!!
-#define distance 100 //Distance between SourceGNP and BystanderGNP
+#define distance 110 //Distance between SourceGNP and BystanderGNP
 
 using namespace CLHEP;
 
@@ -55,7 +55,7 @@ G4VPhysicalVolume* BGMSCDetectorConstruction::Construct()
     G4Material* water = nistManager->FindOrBuildMaterial("G4_WATER");
 
     // World
-    G4Box* world = new G4Box("World", 0.5*um, 0.5*um, 0.5*um);   //halfx=0.05um
+    G4Box* world = new G4Box("World", 6.3*um, 6.3*um, 6.3*um);   //halfx=0.05um
     G4LogicalVolume *worldLogic = new G4LogicalVolume(world, water, "WorldLogic");
     G4VPhysicalVolume *worldPhys = new G4PVPlacement(0, G4ThreeVector(), worldLogic, "WorldPhys", 0, false, 0);
     worldLogic->SetVisAttributes(visAttributes);
@@ -63,7 +63,7 @@ G4VPhysicalVolume* BGMSCDetectorConstruction::Construct()
     // Nano Tubs
     G4Tubs* nanoTubs = new G4Tubs("NanoTubs", 0*nm, radius*nm, radius*nm, 0*deg, 360*deg);
     G4LogicalVolume *nanoTubsLogic = new G4LogicalVolume(nanoTubs, Au, "NanoTubsLogic");
-    new G4PVPlacement(0, G4ThreeVector(0, 0, (2*radius+distance)*nm), nanoTubsLogic, "NanoTubsPhys", worldLogic, 0, 0);// (-490*nm, -490*nm, -490*nm) (0, 0, (2*radius+distance)*nm)
+    new G4PVPlacement(0, G4ThreeVector(0, 0, (distance)*nm), nanoTubsLogic, "NanoTubsPhys", worldLogic, 0, 0);// (-6.2*um, -6.2*um, -6.2*um) (0, 0, (distance)*nm)
     //visAttributes = new G4VisAttributes(G4Colour(1.0, 1.0, 0.0));
     nanoTubsLogic->SetVisAttributes((visAttributes));
 
