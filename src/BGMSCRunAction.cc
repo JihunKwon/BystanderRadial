@@ -7,7 +7,6 @@
 #include "G4TrackingManager.hh"
 
 #include "G4CsvAnalysisManager.hh"
-#include "G4IAEAphspWriter.hh"
 
 #include <fstream>
 #include <sstream>
@@ -25,11 +24,6 @@ BGMSCRunAction::~BGMSCRunAction()
 void BGMSCRunAction::BeginOfRunAction(const G4Run* aRun)
 {
     G4cout << "### Run " << aRun->GetRunID() << " start." << G4endl;
-    G4IAEAphspWriter* Writer = G4IAEAphspWriter::GetInstance();
-    //Writer->SetZStop(-1*mm);
-    Writer->SetRadius(radius*nm);
-    std::vector<double>* a = Writer->GetZStopVector();
-    Writer->BeginOfRunAction(aRun);
 
     G4CsvAnalysisManager* analysisManager = G4CsvAnalysisManager::Instance();
     analysisManager->CreateH1("Enter", "Energy Eistribution of entering e-", 500., 0., 100.); //...Bin number, MinE, MaxE
@@ -38,7 +32,6 @@ void BGMSCRunAction::BeginOfRunAction(const G4Run* aRun)
 
 void BGMSCRunAction::EndOfRunAction(const G4Run* aRun)
 {
-    G4IAEAphspWriter::GetInstance()->EndOfRunAction(aRun);
     G4CsvAnalysisManager* analysisManager = G4CsvAnalysisManager::Instance();
     analysisManager->Write();
     analysisManager->CloseFile();

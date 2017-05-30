@@ -28,7 +28,6 @@
 #include "BGMSCActionInitialization.hh"
 
 #include "G4CsvAnalysisManager.hh"
-#include "G4IAEAphspWriter.hh"
 
 #include <math.h>
 
@@ -43,7 +42,7 @@ int main(int argc,char** argv)
 
 #ifdef G4MULTITHREADED
     G4MTRunManager* runManager = new G4MTRunManager;
-    runManager->SetNumberOfThreads(8);
+    runManager->SetNumberOfThreads(1);
 #else
     G4RunManager* runManager = new G4RunManager;
 #endif
@@ -72,8 +71,8 @@ int main(int argc,char** argv)
 
 #endif
 
-    runManager->BeamOn(146400000);   //Electron 146400000
-//    runManager->BeamOn(53600000);   //Gamma  53600000
+      runManager->BeamOn(2319981);   //Electron 73199810 1319981
+    //  runManager->BeamOn(31420000);   //Gamma  33936483
 
     delete runManager;
     return 0;

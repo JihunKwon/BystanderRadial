@@ -7,8 +7,6 @@
 #include "G4ParticleGun.hh"
 #include "G4SingleParticleSource.hh"
 
-#include "G4IAEAphspReader.hh"
-
 class G4Event;
 
 class BGMSCPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
@@ -26,7 +24,6 @@ public:
     //const G4ParticleGun* GetParticleGun() const { return fParticleGun; } // Simple Particle
 
 private:
-    //G4IAEAphspReader* IAEAReader;
     //G4SingleParticleSource* CircleSource;
     G4SingleParticleSource* CircleSourceG;
     //G4ParticleGun* fParticleGun;

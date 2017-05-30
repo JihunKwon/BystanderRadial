@@ -10,7 +10,6 @@
 
 #include <fstream>
 #include <iostream>
-#include "G4IAEAphspWriter.hh"
 
 BGMSCEventAction::BGMSCEventAction():G4UserEventAction()
 {}
@@ -19,9 +18,7 @@ BGMSCEventAction::~BGMSCEventAction()
 {}
 
 void BGMSCEventAction::BeginOfEventAction(const G4Event* event)
-{
-    G4IAEAphspWriter::GetInstance()->BeginOfEventAction(event);
-}
+{}
 
 void BGMSCEventAction::EndOfEventAction(const G4Event* event)
 {
