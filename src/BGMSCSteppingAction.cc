@@ -199,7 +199,7 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys1") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys1") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -216,14 +216,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux1++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys2") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys2") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -240,14 +240,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux2++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys3") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys3") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -264,14 +264,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux3++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys4") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys4") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -288,14 +288,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux4++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys5") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys5") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -312,14 +312,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux5++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys6") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys6") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -336,14 +336,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux6++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys7") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys7") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -360,14 +360,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux7++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys8") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys8") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -384,14 +384,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux8++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys9") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys9") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -408,14 +408,14 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux9++;
                 }
             }
         }
     }
 
-    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoTubsPhys10") {
+    if (aStep->GetTrack()->GetVolume()->GetName() == "NanoBoxPhys10") {
         if (aStep->GetTrack()->GetParticleDefinition()->GetParticleName() == "e-") {
             if (aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary) {
                 G4double eEnergy = aStep->GetPostStepPoint()->GetKineticEnergy()/keV;
@@ -432,7 +432,7 @@ void BGMSCSteppingAction::UserSteppingAction(const G4Step* aStep)
                         break;
                     }
                 }
-                if(r<0.000005) { //5nm
+                if(r<0.0000005) { //5nm
                     Flux10++;
                 }
             }

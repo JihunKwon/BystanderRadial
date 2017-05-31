@@ -71,7 +71,7 @@ int main(int argc,char** argv)
 
 #endif
 
-      runManager->BeamOn(2319981);   //Electron 73199810 1319981
+      runManager->BeamOn(1319981);   //Electron 73199810 1319981
     //  runManager->BeamOn(31420000);   //Gamma  33936483
 
     delete runManager;
